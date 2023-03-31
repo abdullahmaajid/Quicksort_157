@@ -94,3 +94,27 @@ q_short(low, j - 1);                                                    // Langk
 q_short(j + 1, high);                                                   // Langkah algoritma No. 13 
 
 }
+
+void display() {
+    cout << "\n----------" << endl;
+    cout << "Sorted Array" << endl;
+    cout << "\n----------" << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    cout << "\n\nNumber of comparasion: " << cmp_count << endl;
+    cout << "Number of data movements: " << mov_count << endl;
+}
+
+int main()
+{
+    input();
+    q_short(0, n - 1);                                                      // Sort the array using quick sort 
+    display();
+    system("pause");
+
+    return 0;
+}
